@@ -2,18 +2,29 @@
 using System.Collections;
 
 public class showLayer : MonoBehaviour {
-	
-	public GameObject a;
+
+	//GameObject player;
 	void Start () 
 	{
-
-	
+		//player = Camera.main;
 	}
 
 	void Update () {
+
+		Vector3 vv = gameObject.transform.position;
+		float dis = vv.x- Camera.main.transform.position.x;
+		Debug.Log(dis);
+
 		if (Input.GetKeyDown(KeyCode.A)) 
 		{
-			a.layer = LayerMask.NameToLayer("mapcansee");
+			if (dis<=50)
+			{
+				Transform[] ts = GetComponentsInChildren<Transform>(true);
+				foreach(Transform t in ts)
+				{
+					t.gameObject.layer = LayerMask.NameToLayer("mapcansee");
+				}
+			}
 		}
 	
 	}
