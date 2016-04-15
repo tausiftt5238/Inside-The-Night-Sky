@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\TishPish\Script\Sandbox\rightMap.cs" />
      <Compile Include="Assets\TishPish\Script\TorchLight.cs" />
      <Compile Include="Assets\TishPish\Script\anim.cs" />
+     <Compile Include="Assets\TishPish\Script\effect.cs" />
      <Compile Include="Assets\TishPish\Script\menu.cs" />
      <Compile Include="Assets\TishPish\Script\showLayer.cs" />
      <Compile Include="Assets\TutorialAssets\Scripts\FreeflightCamera.cs" />
